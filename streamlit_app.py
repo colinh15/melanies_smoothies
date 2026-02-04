@@ -10,7 +10,7 @@ st.write(
   """
 )
 
-cnx = st.connection("my_connection", type="snowflake")
+cnx = st.connection("snowflake")
 session = cnx.session()
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
 #st.dataframe(data=my_dataframe, use_container_width=True)
